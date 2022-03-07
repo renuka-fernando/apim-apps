@@ -77,7 +77,7 @@ const Policies: React.FC<PoliciesProps> = ({ disableUpdate }) => {
     const [policies, setPolicies] = useState<Policy[] | null>(null);
     const [allPolicies, setAllPolicies] = useState<PolicySpec[] | null>(null);
     const [expandedResource, setExpandedResource] = useState<string | null>(null);
-    const [isChoreoConnectEnabled, getChoreoConnectEnabled] = useState(false);
+    const [isChoreoConnectEnabled, getChoreoConnectEnabled] = useState(true);
 
     // If Choreo Connect radio button is selected in GatewaySelector, it will pass 
     // value as true to render other UI changes specific to the Choreo Connect.

@@ -138,12 +138,8 @@ const GatewaySelector: FC<GatewaySelectorProps> = ({
                                         control={
                                             <Radio
                                                 color='primary'
-                                                defaultChecked
                                                 id='regularGateway'
-                                                disabled={isRestricted(
-                                                    ['apim:api_create'],
-                                                    apiFromContext,
-                                                )}
+                                                disabled
                                                 onChange={
                                                     handleApprovedGatewayChange
                                                 }
@@ -157,7 +153,12 @@ const GatewaySelector: FC<GatewaySelectorProps> = ({
                                         control={
                                             <Radio
                                                 color='primary'
-                                                disabled
+                                                defaultChecked
+                                                id='choreoConnect'
+                                                disabled={isRestricted(
+                                                    ['apim:api_create'],
+                                                    apiFromContext,
+                                                )}
                                                 onChange={handleApprovedGatewayChange}
                                             />
                                         }
